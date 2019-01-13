@@ -38,6 +38,7 @@ class LatestCrypto extends Command
      */
     public function handle()
     {
+        logger('crypto command fired');
         dispatch(new FetchCryptoPrices());
     }
 }

@@ -44,7 +44,7 @@ class FetchCryptoPrices implements ShouldQueue
         $prices['timestamp'] = Carbon::now()->toIso8601String();
 
         // store prices in DB
-
+        logger('prices obtained');
         event(new ObtainedPrices($prices));
 
     }
